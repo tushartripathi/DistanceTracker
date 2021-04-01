@@ -22,7 +22,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            tools:context=".MapsFragment" />
+            tools:context=".ui.maps.MapsFragment" />
 
         <TextView
             android:id="@+id/countDownText_ID"

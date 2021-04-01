@@ -70,7 +70,7 @@ dependencies {
     //Fused Location
     implementation 'com.google.android.gms:play-services-location:17.1.0'
 
-    //Utils
+    //Utils // To calculte distance between two points
     implementation 'com.google.maps.android:maps-utils-ktx:2.2.0'
 
     //Dagger

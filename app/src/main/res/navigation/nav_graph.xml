@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/permissonFragment"
-        android:name="com.example.distancetracker.PermissonFragment"
+        android:name="com.example.distancetracker.ui.permission.PermissonFragment"
         android:label="fragment_permisson"
         tools:layout="@layout/fragment_permisson" >
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/mapsFragment"
-        android:name="com.example.distancetracker.MapsFragment"
+        android:name="com.example.distancetracker.ui.maps.MapsFragment"
         android:label="fragment_maps"
         tools:layout="@layout/fragment_maps" >
         <action
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.example.distancetracker.ResultFragment"
+        android:name="com.example.distancetracker.ui.result.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result" >
         <action
