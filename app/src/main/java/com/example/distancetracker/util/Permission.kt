@@ -25,18 +25,19 @@ object Permission
         )
     }
 
-    fun hasBackgroundPermission(context: Context):Boolean {
+    fun hasBackgroundPermission(context: Context):Boolean {             //Check if permission is granted
 
-        if(Build.VERSION.SDK_INT>= Build.VERSION_CODES.Q)
+        if(Build.VERSION.SDK_INT>= Build.VERSION_CODES.Q)                     // checking version
         {
             return EasyPermissions.hasPermissions(
-                    context, Manifest.permission.ACCESS_BACKGROUND_LOCATION)
+                    context, Manifest.permission.ACCESS_BACKGROUND_LOCATION)  //using EasyPermission Lib for permission
         }
         else
             return true
     }
 
-    fun requestBackgroundPermisson(fragment: Fragment)    {
+    //When permission is not granted
+    fun requestBackgroundPermisson(fragment: Fragment)    {         // create permission request
         if(Build.VERSION.SDK_INT>= Build.VERSION_CODES.Q) {
             EasyPermissions.requestPermissions(
                     fragment,

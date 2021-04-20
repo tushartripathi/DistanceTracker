@@ -1,6 +1,7 @@
 package com.example.distancetracker.util
 
 import android.hardware.Camera
+import android.util.Log
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.SphericalUtil
@@ -25,12 +26,17 @@ object MapUtils {
         return "$hours:$minutes:$seconds"
     }
 
-    fun calculateDistance(locationList:MutableList<LatLng>):String{
-        if(locationList.isNotEmpty())
+    fun calculateDistance(locationList:MutableList<LatLng>?):String{
+        if(locationList!!.size>1)
         {
-            val meters = SphericalUtil.computeDistanceBetween(locationList[0],locationList.last())
-            val km = meters/1000
-            return DecimalFormat("#.##").format(km)
+            try {
+                val meters = SphericalUtil.computeDistanceBetween(locationList.first(), locationList.last())
+                val km = meters / 1000
+                return DecimalFormat("#.##").format(km)
+            }catch (e:Exception)
+            {
+                Log.d("mapTag","error = "+e.toString())
+            }
         }
         return "0.00"
     }

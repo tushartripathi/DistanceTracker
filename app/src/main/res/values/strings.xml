@@ -9,4 +9,6 @@
     <string name="start">Start</string>
     <string name="message">TAP ON MY LOCATION BUTTON</string>
     <string name="_3">3</string>
+    <string name="distance">Distance</string>
+    <string name="result">%1$s km</string>
 </resources>
